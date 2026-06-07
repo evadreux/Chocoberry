@@ -3,146 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Chocoberry, des cookies artisanaux généreux livrés chez vous.">
-  <title>Chocoberry | Cookies artisanaux</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Shrikhand&display=swap" rel="stylesheet">
+  <meta name="description" content="Les créations pâtissières de Mellina : layer cakes, cookies et brownies.">
+  <title>Mellina — Layer cakes, cookies & brownies</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="announcement">Livraison offerte dès 35 € en France métropolitaine</div>
-
-  <header class="site-header">
-    <a class="logo" href="#accueil">Chocoberry<span>.</span></a>
+  <header class="topbar">
+    <a class="brand" href="#accueil">Mellina</a>
     <nav aria-label="Navigation principale">
-      <a href="#cookies">Nos cookies</a>
-      <a href="#histoire">Notre histoire</a>
-      <a href="#avis">Vos avis</a>
+      <a href="#creations">Créations</a>
+      <a href="#apropos">À propos</a>
+      <a href="#commander">Commander</a>
     </nav>
-    <button class="cart-button" type="button" aria-label="Ouvrir le panier">
-      Panier <span class="cart-count">0</span>
-    </button>
+    <a class="order-link" href="#commander">Faire une demande</a>
   </header>
 
   <main>
     <section class="hero" id="accueil">
       <div class="hero-copy">
-        <p class="eyebrow">Cookies faits main à Paris</p>
-        <h1>Du bonheur<br>à chaque <em>croque.</em></h1>
-        <p class="hero-text">Des cookies généreux, un cœur fondant et des ingrédients choisis avec soin. Cuits chaque matin, dévorés toute la journée.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#cookies">Choisir mes cookies</a>
-          <a class="text-link" href="#histoire">Découvrir notre histoire →</a>
-        </div>
-        <div class="hero-proof">
-          <strong>4,9/5</strong>
-          <span>★★★★★<br>plus de 800 gourmands conquis</span>
-        </div>
+        <p class="intro">Pâtisserie artisanale</p>
+        <h1>Les douceurs<br>de <span>Mellina</span></h1>
+        <p class="hero-text">Layer cakes, cookies et brownies préparés sur commande pour vos fêtes et vos envies sucrées.</p>
+        <a class="button" href="#commander">Commander une création</a>
       </div>
-      <div class="hero-visual" aria-label="Illustration d'un cookie au chocolat">
-        <div class="berry berry-one"></div>
-        <div class="berry berry-two"></div>
-        <div class="cookie cookie-large">
-          <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-        </div>
-        <span class="badge">100%<br>fait maison</span>
-      </div>
-    </section>
-
-    <section class="products section" id="cookies">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">La sélection du moment</p>
-          <h2>Choisis ton bonheur</h2>
-        </div>
-        <div class="filters" aria-label="Filtres des produits">
-          <button class="filter active" data-filter="all">Tous</button>
-          <button class="filter" data-filter="chocolat">Chocolat</button>
-          <button class="filter" data-filter="fruit">Fruités</button>
-        </div>
-      </div>
-      <div class="product-grid">
-        <article class="product-card" data-category="chocolat">
-          <div class="product-image chocolate">
-            <span class="product-tag">Best-seller</span>
-            <div class="cookie cookie-small"><i></i><i></i><i></i><i></i><i></i></div>
-          </div>
-          <div class="product-info">
-            <div><h3>Le Choco Crush</h3><p>Chocolat noir · Fleur de sel</p></div>
-            <button class="add-button" data-name="Le Choco Crush" data-price="4.20">4,20 € <span>+</span></button>
-          </div>
+      <div class="hero-collage" aria-label="Les spécialités de Mellina">
+        <article class="polaroid cake-card">
+          <div class="dessert cake" aria-hidden="true"><i></i><i></i><i></i></div>
+          <p>Layer cakes</p>
         </article>
-        <article class="product-card" data-category="fruit">
-          <div class="product-image raspberry">
-            <span class="product-tag">Nouveau</span>
-            <div class="cookie cookie-small pink"><i></i><i></i><i></i><i></i></div>
-          </div>
-          <div class="product-info">
-            <div><h3>Berry Love</h3><p>Framboise · Chocolat blanc</p></div>
-            <button class="add-button" data-name="Berry Love" data-price="4.50">4,50 € <span>+</span></button>
-          </div>
+        <article class="polaroid cookie-card">
+          <div class="dessert cookie" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+          <p>Cookies</p>
         </article>
-        <article class="product-card" data-category="chocolat">
-          <div class="product-image caramel">
-            <div class="cookie cookie-small caramel-cookie"><i></i><i></i><i></i><i></i><i></i></div>
-          </div>
-          <div class="product-info">
-            <div><h3>Caramel Mood</h3><p>Caramel beurre salé · Noix</p></div>
-            <button class="add-button" data-name="Caramel Mood" data-price="4.40">4,40 € <span>+</span></button>
-          </div>
+        <article class="polaroid brownie-card">
+          <div class="dessert brownie" aria-hidden="true"><i></i></div>
+          <p>Brownies</p>
+        </article>
+        <span class="tape tape-one"></span>
+        <span class="tape tape-two"></span>
+      </div>
+      <p class="scroll-note">Découvrir les créations ↓</p>
+    </section>
+
+    <section class="profile section" id="apropos">
+      <div class="profile-photo" aria-label="Emplacement pour la photo de profil de Mellina">
+        <span>M</span>
+      </div>
+      <div class="profile-copy">
+        <p class="handle">@mellina</p>
+        <h2>Bienvenue dans mon univers sucré.</h2>
+        <p>Je réalise des layer cakes, des cookies et des brownies sur commande.</p>
+        <a href="#commander">Contacter Mellina</a>
+      </div>
+      <div class="profile-note">
+        <span>fait maison</span>
+        <span>sur commande</span>
+        <span>pour vos événements</span>
+      </div>
+    </section>
+
+    <section class="stories section" aria-labelledby="stories-title">
+      <div class="section-title">
+        <p>À la une</p>
+        <h2 id="stories-title">Choisis ta gourmandise</h2>
+      </div>
+      <div class="story-list">
+        <button class="story active" data-filter="all"><span class="story-cover all-cover">tout</span><strong>Tout voir</strong></button>
+        <button class="story" data-filter="cake"><span class="story-cover cake-cover"><i></i></span><strong>Layer cakes</strong></button>
+        <button class="story" data-filter="cookie"><span class="story-cover cookie-cover"><i></i><i></i><i></i></span><strong>Cookies</strong></button>
+        <button class="story" data-filter="brownie"><span class="story-cover brownie-cover"><i></i></span><strong>Brownies</strong></button>
+      </div>
+    </section>
+
+    <section class="creations section" id="creations">
+      <div class="section-title creations-title">
+        <div><p>Le carnet de Mellina</p><h2>Les créations</h2></div>
+        <span>Préparées à la main<br>et sur commande</span>
+      </div>
+      <div class="creation-grid">
+        <article class="creation creation-wide" data-category="cake">
+          <div class="creation-art layer-art"><div class="dessert cake"><i></i><i></i><i></i></div></div>
+          <div class="creation-caption"><h3>Layer cakes</h3><p>Pour les anniversaires et les événements</p><button data-product="Layer cake">Demander un layer cake</button></div>
+        </article>
+        <article class="creation" data-category="cookie">
+          <div class="creation-art cookie-art"><div class="dessert cookie"><i></i><i></i><i></i><i></i><i></i></div></div>
+          <div class="creation-caption"><h3>Cookies</h3><p>Des cookies généreux à partager</p><button data-product="Cookies">Demander des cookies</button></div>
+        </article>
+        <article class="creation" data-category="brownie">
+          <div class="creation-art brownie-art"><div class="dessert brownie"><i></i></div></div>
+          <div class="creation-caption"><h3>Brownies</h3><p>Des carrés chocolatés et fondants</p><button data-product="Brownies">Demander des brownies</button></div>
         </article>
       </div>
     </section>
 
-    <section class="story section" id="histoire">
-      <div class="story-card">
-        <div class="story-art">
-          <div class="cookie cookie-medium"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-        </div>
-        <div class="story-copy">
-          <p class="eyebrow">Notre recette secrète</p>
-          <h2>Des cookies qui ont quelque chose à raconter.</h2>
-          <p>Tout commence dans notre petite cuisine parisienne. Farine française, beurre AOP et chocolat de couverture : pas de raccourci, juste beaucoup d'amour et une obsession pour le cœur parfaitement fondant.</p>
-          <div class="values">
-            <span><b>01</b> Faits main</span>
-            <span><b>02</b> Sans conservateurs</span>
-            <span><b>03</b> Expédiés frais</span>
-          </div>
-        </div>
+    <section class="order section" id="commander">
+      <div class="order-copy">
+        <p>Une envie particulière ?</p>
+        <h2>Parlons de ta prochaine création.</h2>
+        <p>Indique le type de gâteau, la date souhaitée et le nombre de personnes. Mellina pourra ensuite préciser les possibilités et le tarif.</p>
       </div>
-    </section>
-
-    <section class="reviews section" id="avis">
-      <p class="eyebrow">Vous en parlez mieux que nous</p>
-      <h2>Petits mots, grandes émotions</h2>
-      <div class="review-grid">
-        <blockquote><span>★★★★★</span><p>“Croustillants dehors, incroyablement fondants dedans. Le Berry Love est devenu mon obsession.”</p><footer>— Sarah, Lyon</footer></blockquote>
-        <blockquote><span>★★★★★</span><p>“Livrés frais et encore plus généreux qu'en photo. Toute l'équipe en redemande.”</p><footer>— Hugo, Paris</footer></blockquote>
-        <blockquote><span>★★★★★</span><p>“Le cadeau parfait, même si j'avoue en avoir gardé deux pour moi.”</p><footer>— Inès, Bordeaux</footer></blockquote>
-      </div>
-    </section>
-
-    <section class="newsletter">
-      <div><p class="eyebrow">Le club des gourmands</p><h2>-10% sur ta première commande</h2></div>
-      <form><label class="sr-only" for="email">Ton adresse e-mail</label><input id="email" type="email" placeholder="Ton adresse e-mail" required><button class="button button-primary">Je craque</button></form>
+      <form class="order-form">
+        <label>Ton prénom<input type="text" name="name" required></label>
+        <label>Ta demande
+          <select name="product" required>
+            <option value="">Choisir une création</option>
+            <option>Layer cake</option>
+            <option>Cookies</option>
+            <option>Brownies</option>
+          </select>
+        </label>
+        <label class="full">Quelques détails<textarea name="details" rows="4" placeholder="Date, nombre de personnes, parfum souhaité…"></textarea></label>
+        <button class="button full" type="submit">Préparer ma demande</button>
+      </form>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <a class="logo" href="#accueil">Chocoberry<span>.</span></a>
-    <p>Cookies artisanaux, préparés avec amour à Paris.</p>
-    <p>© 2026 Chocoberry</p>
+  <footer>
+    <a class="brand" href="#accueil">Mellina</a>
+    <p>Layer cakes · Cookies · Brownies</p>
+    <a href="#commander">Commander</a>
   </footer>
 
-  <aside class="cart-panel" aria-hidden="true">
-    <div class="cart-header"><h2>Ton panier</h2><button class="cart-close" aria-label="Fermer le panier">×</button></div>
-    <div class="cart-items"><p class="empty-cart">Ton panier attend sa dose de bonheur.</p></div>
-    <div class="cart-footer"><div><span>Total</span><strong class="cart-total">0,00 €</strong></div><button class="button button-primary">Commander</button></div>
-  </aside>
-  <div class="overlay"></div>
-  <div class="toast" role="status">Ajouté au panier</div>
-
+  <div class="toast" role="status">Ta demande est prête.</div>
   <script src="script.js"></script>
 </body>
 </html>
