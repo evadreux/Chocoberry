@@ -100,22 +100,65 @@
       </div>
     </section>
 
-    <section class="cakes section-panel" id="cakes">
-      <div class="cake-stage">
-        <div class="cake-visual pink-cake"><i></i><i></i><i></i></div>
-        <div class="cake-visual red-cake"><i></i><i></i><i></i></div>
-      </div>
-      <div class="panel-copy">
-        <p>Layer cakes & number cakes</p>
-        <h2>Crée ton<br>layer cake.</h2>
-        <p>Choisis le nombre de parts, ton modèle, ta base, ta crème et ton topping.</p>
-        <ul>
-          <li><b>5 parts</b><span>35 €</span></li>
-          <li><b>10 parts</b><span>60 €</span></li>
-          <li><b>15 parts</b><span>85 €</span></li>
-          <li><b>20 parts</b><span>100 €</span></li>
-        </ul>
-        <a class="primary-button light-button" href="#commander">Créer mon layer cake</a>
+    <section class="cakes" id="cakes">
+      <header class="cake-header">
+        <div class="mini-logo cake-logo"><span>choco<br><b>berry</b></span></div>
+        <p>Layer cakes</p>
+        <h2>Crée ton layer cake !</h2>
+      </header>
+      <div class="cake-builder">
+        <section class="builder-step">
+          <h3><span>1.</span> Choisis le nombre de parts</h3>
+          <div class="choice-grid parts-grid">
+            <button class="cake-choice selected" data-group="parts" data-value="5 parts" data-price="35"><span>5 parts</span><strong>35 €</strong></button>
+            <button class="cake-choice" data-group="parts" data-value="10 parts" data-price="60"><span>10 parts</span><strong>60 €</strong></button>
+            <button class="cake-choice" data-group="parts" data-value="15 parts" data-price="85"><span>15 parts</span><strong>85 €</strong></button>
+            <button class="cake-choice" data-group="parts" data-value="20 parts" data-price="100"><span>20 parts</span><strong>100 €</strong></button>
+          </div>
+        </section>
+        <section class="builder-step model-step">
+          <div><h3><span>2.</span> Choisis ton modèle</h3><p>Couleurs, pochages, message : indique tes inspirations dans ta demande.</p></div>
+          <div class="mini-cakes" aria-label="Exemples de modèles">
+            <i class="mini-cake ribbon"></i><i class="mini-cake hearts"></i><i class="mini-cake blue"></i><i class="mini-cake vintage"></i>
+          </div>
+        </section>
+        <section class="builder-step">
+          <h3><span>3.</span> Choisis ta base</h3>
+          <div class="choice-grid three-grid">
+            <button class="cake-choice selected" data-group="base" data-value="Génoise nature"><i class="base-icon nature"></i><b>Génoise nature</b><small>Un gâteau moelleux et aéré</small></button>
+            <button class="cake-choice" data-group="base" data-value="Mathilda cake"><i class="base-icon mathilda"></i><b>Mathilda cake</b><small>Un gâteau au chocolat riche et gourmand</small></button>
+            <button class="cake-choice" data-group="base" data-value="Red velvet"><i class="base-icon velvet"></i><b>Red velvet</b><small>Un gâteau moelleux à la vanille et au cacao</small></button>
+          </div>
+        </section>
+        <section class="builder-step">
+          <h3><span>4.</span> Choisis ta crème</h3>
+          <div class="choice-grid three-grid">
+            <button class="cake-choice selected" data-group="cream" data-value="Chantilly mascarpone"><i class="cream-icon chantilly"></i><b>Chantilly mascarpone</b><small>Fraîche et légère</small></button>
+            <button class="cake-choice" data-group="cream" data-value="Ganache montée au chocolat"><i class="cream-icon ganache"></i><b>Ganache montée au chocolat</b><small>Chocolat noir et fleur de sel</small></button>
+            <button class="cake-choice" data-group="cream" data-value="Cream cheese"><i class="cream-icon cheese"></i><b>Cream cheese</b><small>Crémeux et vanillé</small></button>
+          </div>
+        </section>
+        <section class="builder-step">
+          <h3><span>5.</span> Choisis ton topping</h3>
+          <div class="choice-grid toppings-grid">
+            <button class="cake-choice selected" data-group="topping" data-value="Fraise"><i class="topping-icon strawberry"></i><b>Fraise</b><small>Fraîches seulement en saison</small></button>
+            <button class="cake-choice" data-group="topping" data-value="Framboise"><i class="topping-icon raspberry"></i><b>Framboise</b><small>Avec coulis de framboises</small></button>
+            <button class="cake-choice" data-group="topping" data-value="Mangue"><i class="topping-icon mango"></i><b>Mangue</b><small>Fraîche, avec coulis de mangue</small></button>
+            <button class="cake-choice" data-group="topping" data-value="Caramel maison"><i class="topping-icon caramel"></i><b>Caramel maison</b><small>Au beurre et fleur de sel</small></button>
+            <button class="cake-choice" data-group="topping" data-value="Kinder bueno"><i class="topping-icon kinder"></i><b>Kinder bueno</b><small>Pâte à tartiner et morceaux</small></button>
+            <button class="cake-choice" data-group="topping" data-value="Kinder bueno white"><i class="topping-icon kinder white-kinder"></i><b>Kinder bueno white</b><small>Pâte El Mordjene et morceaux</small></button>
+            <button class="cake-choice" data-group="topping" data-value="Oreo"><i class="topping-icon oreo-top"></i><b>Oreo</b><small>Morceaux mélangés à la crème</small></button>
+            <button class="cake-choice" data-group="topping" data-value="Spéculos"><i class="topping-icon speculos"></i><b>Spéculos</b><small>Pâte à tartiner et biscuits</small></button>
+            <button class="cake-choice" data-group="topping" data-value="Pistache"><i class="topping-icon pistachio"></i><b>Pistache</b><small>Avec crème de pistache</small></button>
+            <button class="cake-choice" data-group="topping" data-value="Curd passion maison"><i class="topping-icon passion"></i><b>Curd passion maison</b><small>Selon la saison</small></button>
+          </div>
+        </section>
+        <aside class="cake-summary">
+          <div><p>Ta création</p><strong class="cake-total">35 €</strong></div>
+          <p class="cake-recap">5 parts · Génoise nature · Chantilly mascarpone · Fraise</p>
+          <label><input type="checkbox" class="second-topping"> Ajouter un second topping <span class="topping-extra">+ 5 €</span></label>
+          <button class="primary-button build-order" type="button">Ajouter à ma demande</button>
+        </aside>
       </div>
     </section>
 
