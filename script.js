@@ -16,7 +16,7 @@ function updateCakeSummary() {
   const extra = secondTopping.checked ? Number(partsChoice.dataset.price) <= 60 ? 5 : 8 : 0;
   cakeTotal.textContent = `${Number(partsChoice.dataset.price) + extra} €`;
   document.querySelector(".topping-extra").textContent = Number(partsChoice.dataset.price) <= 60 ? "+ 5 €" : "+ 8 €";
-  cakeRecap.textContent = `${selected.parts} · ${selected.base} · ${selected.cream} · ${selected.topping}${secondTopping.checked ? " · supplément 2 toppings" : ""}`;
+  cakeRecap.textContent = `${selected.parts} · ${selected.base} · ${selected.cream} · ${selected.topping}${secondTopping.checked ? " · second topping" : ""}`;
 }
 
 choices.forEach((choice) => {
