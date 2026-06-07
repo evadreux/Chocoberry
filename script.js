@@ -4,8 +4,9 @@ const choices = document.querySelectorAll(".cake-choice");
 const secondTopping = document.querySelector(".second-topping");
 const cakeTotal = document.querySelector(".cake-total");
 const cakeRecap = document.querySelector(".cake-recap");
-const details = document.querySelector('textarea[name="details"]');
-const product = document.querySelector('select[name="product"]');
+const orderSummary = document.querySelector('input[name="orderSummary"]');
+const orderItems = document.querySelector(".order-items");
+const orderCount = document.querySelector(".order-count");
 const brownieChoices = document.querySelectorAll(".brownie-choice");
 const brownieCounts = document.querySelectorAll(".brownie-count");
 const brownieTotal = document.querySelector(".brownie-total");
@@ -19,6 +20,53 @@ const miniMixChoices = document.querySelectorAll(".mini-mix");
 const miniSauces = document.querySelectorAll(".mini-sauce");
 const minisTotal = document.querySelector(".minis-total");
 const minisRecap = document.querySelector(".minis-recap");
+const requestItems = [];
+
+function showToast(message) {
+  toast.textContent = message;
+  toast.classList.add("show");
+  setTimeout(() => toast.classList.remove("show"), 2200);
+}
+
+function renderRequest() {
+  orderItems.replaceChildren();
+  if (!requestItems.length) {
+    const empty = document.createElement("p");
+    empty.className = "order-empty";
+    empty.textContent = "Ajoute des cookies, minis, brownies ou un layer cake depuis leur menu.";
+    orderItems.append(empty);
+  }
+
+  requestItems.forEach((item, index) => {
+    const article = document.createElement("article");
+    const copy = document.createElement("div");
+    const title = document.createElement("strong");
+    const recap = document.createElement("p");
+    const remove = document.createElement("button");
+
+    title.textContent = item.type;
+    recap.textContent = item.recap;
+    remove.type = "button";
+    remove.textContent = "Retirer";
+    remove.addEventListener("click", () => {
+      requestItems.splice(index, 1);
+      renderRequest();
+    });
+    copy.append(title, recap);
+    article.append(copy, remove);
+    orderItems.append(article);
+  });
+
+  orderCount.textContent = `${requestItems.length} article${requestItems.length > 1 ? "s" : ""}`;
+  orderSummary.value = requestItems.map((item, index) => `${index + 1}. ${item.type} : ${item.recap}`).join("\n");
+}
+
+function addToRequest(type, recap) {
+  requestItems.push({ type, recap });
+  renderRequest();
+  showToast(`${type} ajouté à ta demande.`);
+  document.querySelector("#commander").scrollIntoView({ behavior: "smooth" });
+}
 
 function updateMinisSummary() {
   const box = document.querySelector(".mini-box-choice.selected");
@@ -56,9 +104,7 @@ miniSauces.forEach((choice) => {
 });
 
 document.querySelector(".minis-order").addEventListener("click", () => {
-  product.value = "Les minis";
-  details.value = `Les minis : ${minisRecap.textContent} · Total ${minisTotal.textContent}`;
-  document.querySelector("#commander").scrollIntoView({ behavior: "smooth" });
+  addToRequest("Les minis", `${minisRecap.textContent} · Total ${minisTotal.textContent}`);
 });
 
 function updateCookieSummary() {
@@ -92,9 +138,7 @@ cookieOptions.forEach((option) => {
 });
 
 cookieOrder.addEventListener("click", () => {
-  product.value = "Cookies";
-  details.value = `Cookies : ${cookieRecap.textContent} · Total ${cookieTotal.textContent}`;
-  document.querySelector("#commander").scrollIntoView({ behavior: "smooth" });
+  addToRequest("Cookies", `${cookieRecap.textContent} · Total ${cookieTotal.textContent}`);
 });
 
 function updateBrownieSummary() {
@@ -121,9 +165,7 @@ brownieCounts.forEach((count) => {
 });
 
 document.querySelector(".brownie-order").addEventListener("click", () => {
-  product.value = "Brownies";
-  details.value = `Brownies : ${brownieRecap.textContent} · Total ${brownieTotal.textContent}`;
-  document.querySelector("#commander").scrollIntoView({ behavior: "smooth" });
+  addToRequest("Brownies", `${brownieRecap.textContent} · Total ${brownieTotal.textContent}`);
 });
 
 function updateCakeSummary() {
@@ -149,13 +191,14 @@ choices.forEach((choice) => {
 secondTopping.addEventListener("change", updateCakeSummary);
 
 document.querySelector(".build-order").addEventListener("click", () => {
-  product.value = "Layer cake";
-  details.value = `Layer cake : ${cakeRecap.textContent} · Total indicatif ${cakeTotal.textContent}`;
-  document.querySelector("#commander").scrollIntoView({ behavior: "smooth" });
+  addToRequest("Layer cake", `${cakeRecap.textContent} · Total indicatif ${cakeTotal.textContent}`);
 });
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  toast.classList.add("show");
-  setTimeout(() => toast.classList.remove("show"), 2200);
+  if (!requestItems.length) {
+    showToast("Ajoute au moins un article à ta demande.");
+    return;
+  }
+  showToast("Ta demande composée est prête.");
 });

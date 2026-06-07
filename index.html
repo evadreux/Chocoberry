@@ -242,13 +242,13 @@
       </div>
       <form class="order-form">
         <label>Ton prénom<input type="text" name="name" required></label>
-        <label>Ta demande
-          <select name="product" required>
-            <option value="">Choisir</option>
-            <option>Cookies</option><option>Les minis</option><option>Brownies</option><option>Layer cake</option>
-          </select>
-        </label>
-        <label class="full">Détails<textarea name="details" rows="4" placeholder="Quantité, date et saveurs souhaitées"></textarea></label>
+        <input type="hidden" name="product" value="Commande composée">
+        <input type="hidden" name="orderSummary" value="">
+        <div class="order-cart full">
+          <div class="order-cart-heading"><span>Ta demande</span><strong class="order-count">0 article</strong></div>
+          <div class="order-items"><p class="order-empty">Ajoute des cookies, minis, brownies ou un layer cake depuis leur menu.</p></div>
+        </div>
+        <label class="full">Informations complémentaires<textarea name="details" rows="4" placeholder="Date souhaitée, inspirations et précisions"></textarea></label>
         <button class="primary-button full" type="submit">Préparer ma demande</button>
       </form>
     </section>
