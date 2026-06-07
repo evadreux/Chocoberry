@@ -41,43 +41,49 @@
       <span>faits avec de bons ingrédients et beaucoup d’amour</span>
     </section>
 
-    <section class="menu-section" id="menu">
-      <header class="section-heading">
+    <section class="cookies-builder-section" id="menu">
+      <header class="cookie-header" id="cookies">
+        <div class="mini-logo cookie-logo"><span>choco<br><b>berry</b></span></div>
         <p>Menu des cookies</p>
-        <h2>Trois familles,<br>une même gourmandise.</h2>
+        <h2>Compose ta boîte de cookies.</h2>
+        <span>Fondants au centre et crispy sur les bords.</span>
       </header>
-      <div class="family-grid">
-        <article class="family pink" id="cookies">
-          <span class="family-number">01</span>
-          <div class="cookie-visual milk"><i></i><i></i><i></i><i></i></div>
-          <div><p>~ 65 g</p><h3>Les classiques</h3><p>Quand simplicité rime avec déliciosité.</p><strong>2,50 €</strong></div>
-        </article>
-        <article class="family burgundy">
-          <span class="family-number">02</span>
-          <div class="cookie-visual choco"><i></i><i></i><i></i><i></i></div>
-          <div><p>~ 80 / 90 g</p><h3>Les gourmands</h3><p>Kinder, pistache ou pâte à tartiner.</p><strong>3 €</strong></div>
-        </article>
-        <article class="family pink">
-          <span class="family-number">03</span>
-          <div class="cookie-visual decadent"><i></i><i></i><i></i><i></i></div>
-          <div><p>~ 105 / 120 g</p><h3>Les décadents</h3><p>Peanut butter, spéculos ou El Mordjene.</p><strong>3,50 €</strong></div>
-        </article>
-      </div>
-      <p class="minimum">Commandes à partir de 6 cookies.</p>
-    </section>
-
-    <section class="flavours">
-      <header class="section-heading light">
-        <p>Quelques saveurs</p>
-        <h2>Choisis ton cookie.</h2>
-      </header>
-      <div class="flavour-grid">
-        <article><div class="cookie-visual milk"><i></i><i></i><i></i></div><h3>The original</h3><p>Chocolat au lait</p></article>
-        <article><div class="cookie-visual white"><i></i><i></i><i></i></div><h3>White delicacy</h3><p>Chocolat blanc</p></article>
-        <article><div class="cookie-visual choco"><i></i><i></i><i></i></div><h3>L’indémodable</h3><p>Chocolat noir</p></article>
-        <article><div class="cookie-visual triple"><i></i><i></i><i></i></div><h3>Le triple chocolats</h3><p>Chocolat noir, au lait et blanc</p></article>
-        <article><div class="cookie-visual red"><i></i><i></i><i></i></div><h3>Red velvet</h3><p>Chocolat blanc et au lait</p></article>
-        <article><div class="cookie-visual lotus"><i></i><i></i><i></i></div><h3>Spéculos lava</h3><p>Biscuits et pâte de spéculos</p></article>
+      <div class="cookie-builder">
+        <section class="cookie-family">
+          <div class="cookie-family-title"><div><span>01</span><h3>Les classiques</h3><p>~ 65 g · 2,50 €</p></div><p>Quand simplicité rime avec déliciosité.</p></div>
+          <div class="cookie-options">
+            <article class="cookie-option" data-name="The original" data-price="2.5"><div class="cookie-visual milk"><i></i><i></i><i></i></div><h4>The original</h4><p>Chocolat au lait</p><div class="qty"><button class="minus">−</button><b>0</b><button class="plus">+</button></div></article>
+            <article class="cookie-option" data-name="White delicacy" data-price="2.5"><div class="cookie-visual white"><i></i><i></i><i></i></div><h4>White delicacy</h4><p>Chocolat blanc</p><div class="qty"><button class="minus">−</button><b>0</b><button class="plus">+</button></div></article>
+            <article class="cookie-option" data-name="L’indémodable" data-price="2.5"><div class="cookie-visual choco"><i></i><i></i><i></i></div><h4>L’indémodable</h4><p>Chocolat noir</p><div class="qty"><button class="minus">−</button><b>0</b><button class="plus">+</button></div></article>
+            <article class="cookie-option" data-name="Le triple chocolats" data-price="2.5"><div class="cookie-visual triple"><i></i><i></i><i></i></div><h4>Le triple chocolats</h4><p>Chocolat noir, au lait et blanc</p><div class="qty"><button class="minus">−</button><b>0</b><button class="plus">+</button></div></article>
+          </div>
+        </section>
+        <section class="cookie-family">
+          <div class="cookie-family-title"><div><span>02</span><h3>Les gourmands</h3><p>~ 80 / 90 g · 3 €</p></div><p>La gourmandise à l’état pur.</p></div>
+          <div class="cookie-options">
+            <article class="cookie-option" data-name="Sweet pistacchio" data-price="3"><div class="cookie-visual white"><i></i><i></i><i></i></div><h4>Sweet pistacchio</h4><p>Chocolat blanc et crème de pistache</p><div class="qty"><button class="minus">−</button><b>0</b><button class="plus">+</button></div></article>
+            <article class="cookie-option" data-name="Kinder party" data-price="3"><div class="cookie-visual triple"><i></i><i></i><i></i></div><h4>Kinder party</h4><p>Chocolat au lait, blanc et Kinder Maxi</p><div class="qty"><button class="minus">−</button><b>0</b><button class="plus">+</button></div></article>
+            <article class="cookie-option" data-name="Red velvet" data-price="3"><div class="cookie-visual red"><i></i><i></i><i></i></div><h4>Red velvet</h4><p>Pâte cacaotée, chocolat blanc et au lait</p><div class="qty"><button class="minus">−</button><b>0</b><button class="plus">+</button></div></article>
+            <article class="cookie-option" data-name="Choco bomb" data-price="3"><div class="cookie-visual milk"><i></i><i></i><i></i></div><h4>Choco bomb</h4><p>Chocolat au lait, pâte à tartiner et Kinder Bueno</p><div class="qty"><button class="minus">−</button><b>0</b><button class="plus">+</button></div></article>
+            <article class="cookie-option" data-name="Mr. Black & White" data-price="3"><div class="cookie-visual choco"><i></i><i></i><i></i></div><h4>Mr. Black & White</h4><p>Pâte cacao, chocolats noir, blanc et au lait</p><div class="qty"><button class="minus">−</button><b>0</b><button class="plus">+</button></div></article>
+          </div>
+        </section>
+        <section class="cookie-family">
+          <div class="cookie-family-title"><div><span>03</span><h3>Les décadents</h3><p>~ 105 / 120 g · 3,50 €</p></div><p>Des cookies tout droit sortis de vos rêves.</p></div>
+          <div class="cookie-options">
+            <article class="cookie-option" data-name="Bueno lover" data-price="3.5"><div class="cookie-visual white"><i></i><i></i><i></i></div><h4>Bueno lover</h4><p>Chocolat blanc, El Mordjene et Kinder Bueno White</p><div class="qty"><button class="minus">−</button><b>0</b><button class="plus">+</button></div></article>
+            <article class="cookie-option" data-name="Caramelicious" data-price="3.5"><div class="cookie-visual milk"><i></i><i></i><i></i></div><h4>Caramelicious</h4><p>Noix de pécan, caramel beurre salé et chocolat au lait</p><div class="qty"><button class="minus">−</button><b>0</b><button class="plus">+</button></div></article>
+            <article class="cookie-option" data-name="Fancy Raffaello" data-price="3.5"><div class="cookie-visual white"><i></i><i></i><i></i></div><h4>Fancy Raffaello</h4><p>Coco, amandes, chocolat blanc et El Mordjene</p><div class="qty"><button class="minus">−</button><b>0</b><button class="plus">+</button></div></article>
+            <article class="cookie-option" data-name="Spéculos lava" data-price="3.5"><div class="cookie-visual lotus"><i></i><i></i><i></i></div><h4>Spéculos lava</h4><p>Biscuits, chocolat blanc et pâte de spéculos</p><div class="qty"><button class="minus">−</button><b>0</b><button class="plus">+</button></div></article>
+            <article class="cookie-option" data-name="Cutie oreo" data-price="3.5"><div class="cookie-visual choco"><i></i><i></i><i></i></div><h4>Cutie oreo</h4><p>Biscuits Oreo, chocolat blanc et fourrage chocolat blanc</p><div class="qty"><button class="minus">−</button><b>0</b><button class="plus">+</button></div></article>
+            <article class="cookie-option" data-name="Crazy peanut" data-price="3.5"><div class="cookie-visual triple"><i></i><i></i><i></i></div><h4>Crazy peanut</h4><p>Chocolats noir et au lait, cacahuètes et peanut butter</p><div class="qty"><button class="minus">−</button><b>0</b><button class="plus">+</button></div></article>
+          </div>
+        </section>
+        <aside class="cookie-summary">
+          <div><p>Ta boîte</p><strong class="cookie-total">0,00 €</strong></div>
+          <p class="cookie-recap">Ajoute au moins 6 cookies.</p>
+          <button class="primary-button cookie-order" type="button" disabled>Ajouter à ma demande</button>
+        </aside>
       </div>
     </section>
 

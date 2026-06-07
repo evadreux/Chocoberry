@@ -10,6 +10,46 @@ const brownieChoices = document.querySelectorAll(".brownie-choice");
 const brownieCounts = document.querySelectorAll(".brownie-count");
 const brownieTotal = document.querySelector(".brownie-total");
 const brownieRecap = document.querySelector(".brownie-recap");
+const cookieOptions = document.querySelectorAll(".cookie-option");
+const cookieTotal = document.querySelector(".cookie-total");
+const cookieRecap = document.querySelector(".cookie-recap");
+const cookieOrder = document.querySelector(".cookie-order");
+
+function updateCookieSummary() {
+  let count = 0;
+  let total = 0;
+  const selection = [];
+  cookieOptions.forEach((option) => {
+    const quantity = Number(option.querySelector(".qty b").textContent);
+    if (quantity) selection.push(`${quantity} × ${option.dataset.name}`);
+    count += quantity;
+    total += quantity * Number(option.dataset.price);
+  });
+  cookieTotal.textContent = new Intl.NumberFormat("fr-FR", { style: "currency", currency: "EUR" }).format(total);
+  cookieRecap.textContent = count < 6 ? `${count} cookie${count > 1 ? "s" : ""} · minimum 6` : `${count} cookies · ${selection.join(", ")}`;
+  cookieOrder.disabled = count < 6;
+}
+
+cookieOptions.forEach((option) => {
+  option.querySelector(".plus").addEventListener("click", () => {
+    const quantity = option.querySelector(".qty b");
+    quantity.textContent = Number(quantity.textContent) + 1;
+    option.classList.add("selected");
+    updateCookieSummary();
+  });
+  option.querySelector(".minus").addEventListener("click", () => {
+    const quantity = option.querySelector(".qty b");
+    quantity.textContent = Math.max(0, Number(quantity.textContent) - 1);
+    option.classList.toggle("selected", Number(quantity.textContent) > 0);
+    updateCookieSummary();
+  });
+});
+
+cookieOrder.addEventListener("click", () => {
+  product.value = "Cookies";
+  details.value = `Cookies : ${cookieRecap.textContent} · Total ${cookieTotal.textContent}`;
+  document.querySelector("#commander").scrollIntoView({ behavior: "smooth" });
+});
 
 function updateBrownieSummary() {
   const flavours = [...document.querySelectorAll(".brownie-choice.selected")].map((choice) => choice.dataset.value);
