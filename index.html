@@ -81,22 +81,38 @@
       </div>
     </section>
 
-    <section class="brownies section-panel" id="brownies">
-      <div class="panel-copy">
+    <section class="brownies" id="brownies">
+      <header class="brownie-header">
+        <div class="mini-logo brownie-logo"><span>choco<br><b>berry</b></span></div>
         <p>Menu des brownies</p>
-        <h2>Fondants,<br>chewy,<br>intenses.</h2>
-        <p>Préparés eux aussi avec du brown butter et une touche de fleur de sel.</p>
-      </div>
-      <div class="brownie-board">
-        <article><div class="brownie-visual bueno"></div><h3>Bueno lover</h3></article>
-        <article><div class="brownie-visual lotus"></div><h3>Spéculos lava</h3></article>
-        <article><div class="brownie-visual oreo"></div><h3>Cutie oreo</h3></article>
-        <article><div class="brownie-visual pistache"></div><h3>Sweet pistacchio</h3></article>
-      </div>
-      <div class="prices">
-        <p><b>6 pièces</b><span>10 €</span></p>
-        <p><b>10 pièces</b><span>14 €</span></p>
-        <p><b>16 pièces</b><span>24 €</span></p>
+        <h2>Choisis les saveurs et le nombre de pièces que tu souhaites !</h2>
+      </header>
+      <div class="brownie-builder">
+        <div class="brownie-intro">
+          <p>Une texture fondante et chewy, un goût intense en chocolat et une touche de fleur de sel.</p>
+          <p>Les brownies Chocoberry sont préparés avec du brown butter.</p>
+        </div>
+        <div class="brownie-flavours">
+          <button class="brownie-choice selected" data-value="Choco bomb"><span class="brownie-visual choco-bomb"></span><b>Choco bomb</b><small>Pâte à tartiner et un Kinder Bueno on top</small></button>
+          <button class="brownie-choice" data-value="Sweet pistacchio"><span class="brownie-visual pistache"></span><b>Sweet pistacchio</b><small>Crème de pistache</small></button>
+          <button class="brownie-choice" data-value="Cutie oreo"><span class="brownie-visual oreo"></span><b>Cutie oreo</b><small>Chocolat blanc et un Oreo on top</small></button>
+          <button class="brownie-choice" data-value="Bueno lover"><span class="brownie-visual bueno"></span><b>Bueno lover</b><small>Pâte El Mordjene et Kinder Bueno White</small></button>
+          <button class="brownie-choice" data-value="Kinder party"><span class="brownie-visual kinder-party"></span><b>Kinder party</b><small>Chocolat au lait, chocolat blanc et Kinder Maxi</small></button>
+          <button class="brownie-choice" data-value="Spéculos lava"><span class="brownie-visual speculos-lava"></span><b>Spéculos lava</b><small>Pâte à tartiner spéculos</small></button>
+        </div>
+        <div class="brownie-quantity">
+          <h3>Choisis le nombre de pièces</h3>
+          <div>
+            <button class="brownie-count selected" data-count="6 pièces" data-price="10"><b>6 pièces</b><span>10 €</span></button>
+            <button class="brownie-count" data-count="10 pièces" data-price="14"><b>10 pièces</b><span>14 €</span></button>
+            <button class="brownie-count" data-count="16 pièces (brownie entier)" data-price="24"><b>16 pièces</b><span>24 €</span></button>
+          </div>
+        </div>
+        <aside class="brownie-summary">
+          <div><p>Ta sélection</p><strong class="brownie-total">10 €</strong></div>
+          <p class="brownie-recap">6 pièces · Choco bomb</p>
+          <button class="primary-button brownie-order" type="button">Ajouter à ma demande</button>
+        </aside>
       </div>
     </section>
 
