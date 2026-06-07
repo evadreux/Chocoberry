@@ -14,6 +14,52 @@ const cookieOptions = document.querySelectorAll(".cookie-option");
 const cookieTotal = document.querySelector(".cookie-total");
 const cookieRecap = document.querySelector(".cookie-recap");
 const cookieOrder = document.querySelector(".cookie-order");
+const miniBoxChoices = document.querySelectorAll(".mini-box-choice");
+const miniMixChoices = document.querySelectorAll(".mini-mix");
+const miniSauces = document.querySelectorAll(".mini-sauce");
+const minisTotal = document.querySelector(".minis-total");
+const minisRecap = document.querySelector(".minis-recap");
+
+function updateMinisSummary() {
+  const box = document.querySelector(".mini-box-choice.selected");
+  const mixes = [...document.querySelectorAll(".mini-mix.selected")].map((item) => item.dataset.value);
+  const sauces = [...document.querySelectorAll(".mini-sauce.selected")];
+  const premiumCount = sauces.filter((item) => item.dataset.premium === "true").length;
+  const classicCount = sauces.length - premiumCount;
+  const sauceExtra = premiumCount * 0.5 + Math.max(0, classicCount - (premiumCount ? 0 : 1)) * 0.5;
+  minisTotal.textContent = new Intl.NumberFormat("fr-FR", { style: "currency", currency: "EUR" }).format(Number(box.dataset.price) + sauceExtra);
+  minisRecap.textContent = `${box.dataset.size} · ${mixes.join(", ")} · ${sauces.length ? sauces.map((item) => item.dataset.value).join(", ") : "sans sauce"}`;
+}
+
+miniBoxChoices.forEach((choice) => {
+  choice.addEventListener("click", () => {
+    miniBoxChoices.forEach((item) => item.classList.remove("selected"));
+    choice.classList.add("selected");
+    updateMinisSummary();
+  });
+});
+
+miniMixChoices.forEach((choice) => {
+  choice.addEventListener("click", () => {
+    if (choice.classList.contains("selected") && document.querySelectorAll(".mini-mix.selected").length === 1) return;
+    choice.classList.toggle("selected");
+    updateMinisSummary();
+  });
+});
+
+miniSauces.forEach((choice) => {
+  choice.addEventListener("click", () => {
+    if (!choice.classList.contains("selected") && document.querySelectorAll(".mini-sauce.selected").length >= 3) return;
+    choice.classList.toggle("selected");
+    updateMinisSummary();
+  });
+});
+
+document.querySelector(".minis-order").addEventListener("click", () => {
+  product.value = "Les minis";
+  details.value = `Les minis : ${minisRecap.textContent} · Total ${minisTotal.textContent}`;
+  document.querySelector("#commander").scrollIntoView({ behavior: "smooth" });
+});
 
 function updateCookieSummary() {
   let count = 0;

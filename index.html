@@ -12,6 +12,7 @@
     <a class="mini-logo" href="#accueil"><span>choco<br><b>berry</b></span></a>
     <nav aria-label="Navigation principale">
       <a href="#cookies">Cookies</a>
+      <a href="#minis">Les minis</a>
       <a href="#brownies">Brownies</a>
       <a href="#cakes">Layer cakes</a>
     </nav>
@@ -83,6 +84,54 @@
           <div><p>Ta boîte</p><strong class="cookie-total">0,00 €</strong></div>
           <p class="cookie-recap">Ajoute au moins 6 cookies.</p>
           <button class="primary-button cookie-order" type="button" disabled>Ajouter à ma demande</button>
+        </aside>
+      </div>
+    </section>
+
+    <section class="minis" id="minis">
+      <header class="minis-header">
+        <div class="mini-logo minis-logo"><span>choco<br><b>berry</b></span></div>
+        <p>Menu des minis</p>
+        <h2>Les minis !!!</h2>
+        <span>Cookies & brownies</span>
+      </header>
+      <div class="minis-builder">
+        <div class="minis-intro">
+          <div><p>Pour multiplier les bouchées sans diviser le plaisir.</p><p>Compose une box de mini cookies et mini brownies avec jusqu’à trois sauces à dipper.</p></div>
+          <div class="mini-box-art" aria-label="Illustration d'une box de minis"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+        <section class="mini-step">
+          <h3><span>1.</span> Choisis ta box</h3>
+          <div class="mini-box-choices">
+            <button class="mini-box-choice selected" data-size="Box 250 g" data-price="10"><b>250 g</b><strong>10 €</strong></button>
+            <button class="mini-box-choice" data-size="Box 500 g" data-price="16"><b>500 g</b><strong>16 €</strong></button>
+          </div>
+        </section>
+        <section class="mini-step">
+          <h3><span>2.</span> Choisis la composition</h3>
+          <p>Mélanges possibles.</p>
+          <div class="mini-composition">
+            <button class="mini-mix selected" data-value="Mini cookies chocolat au lait"><i class="mini-bite milk-bite"></i><b>Mini cookies chocolat au lait</b></button>
+            <button class="mini-mix" data-value="Mini cookies chocolat blanc"><i class="mini-bite white-bite"></i><b>Mini cookies chocolat blanc</b></button>
+            <button class="mini-mix" data-value="Mini cookies chocolat noir"><i class="mini-bite dark-bite"></i><b>Mini cookies chocolat noir</b></button>
+            <button class="mini-mix" data-value="Mini bouchées de brownies"><i class="mini-bite brownie-bite"></i><b>Mini bouchées de brownies</b></button>
+          </div>
+        </section>
+        <section class="mini-step">
+          <h3><span>3.</span> Choisis jusqu’à 3 sauces</h3>
+          <p>La première sauce classique est offerte. La deuxième et la troisième coûtent 0,50 €.</p>
+          <div class="mini-sauces">
+            <button class="mini-sauce" data-value="Pâte à tartiner" data-premium="false"><i class="sauce-art spread"></i><b>Pâte à tartiner</b></button>
+            <button class="mini-sauce" data-value="Chocolat au lait" data-premium="false"><i class="sauce-art milk-sauce"></i><b>Chocolat au lait</b></button>
+            <button class="mini-sauce" data-value="Chocolat blanc" data-premium="false"><i class="sauce-art white-sauce"></i><b>Chocolat blanc</b></button>
+            <button class="mini-sauce" data-value="Crème de pistache" data-premium="true"><i class="sauce-art pistachio-sauce"></i><b>Crème de pistache</b><small>+ 0,50 €</small></button>
+            <button class="mini-sauce" data-value="El Mordjene" data-premium="true"><i class="sauce-art mordjene"></i><b>El Mordjene</b><small>+ 0,50 €</small></button>
+          </div>
+        </section>
+        <aside class="minis-summary">
+          <div><p>Ta box de minis</p><strong class="minis-total">10 €</strong></div>
+          <p class="minis-recap">Box 250 g · Mini cookies chocolat au lait · sans sauce</p>
+          <button class="primary-button minis-order" type="button">Ajouter à ma demande</button>
         </aside>
       </div>
     </section>
@@ -194,7 +243,7 @@
         <label>Ta demande
           <select name="product" required>
             <option value="">Choisir</option>
-            <option>Cookies</option><option>Brownies</option><option>Layer cake</option>
+            <option>Cookies</option><option>Les minis</option><option>Brownies</option><option>Layer cake</option>
           </select>
         </label>
         <label class="full">Détails<textarea name="details" rows="4" placeholder="Quantité, date et saveurs souhaitées"></textarea></label>
