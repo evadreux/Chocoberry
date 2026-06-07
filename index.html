@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chocoberry, des cookies artisanaux généreux livrés chez vous.">
+  <title>Chocoberry | Cookies artisanaux</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Shrikhand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">Livraison offerte dès 35 € en France métropolitaine</div>
+
+  <header class="site-header">
+    <a class="logo" href="#accueil">Chocoberry<span>.</span></a>
+    <nav aria-label="Navigation principale">
+      <a href="#cookies">Nos cookies</a>
+      <a href="#histoire">Notre histoire</a>
+      <a href="#avis">Vos avis</a>
+    </nav>
+    <button class="cart-button" type="button" aria-label="Ouvrir le panier">
+      Panier <span class="cart-count">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="hero-copy">
+        <p class="eyebrow">Cookies faits main à Paris</p>
+        <h1>Du bonheur<br>à chaque <em>croque.</em></h1>
+        <p class="hero-text">Des cookies généreux, un cœur fondant et des ingrédients choisis avec soin. Cuits chaque matin, dévorés toute la journée.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#cookies">Choisir mes cookies</a>
+          <a class="text-link" href="#histoire">Découvrir notre histoire →</a>
+        </div>
+        <div class="hero-proof">
+          <strong>4,9/5</strong>
+          <span>★★★★★<br>plus de 800 gourmands conquis</span>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="Illustration d'un cookie au chocolat">
+        <div class="berry berry-one"></div>
+        <div class="berry berry-two"></div>
+        <div class="cookie cookie-large">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <span class="badge">100%<br>fait maison</span>
+      </div>
+    </section>
+
+    <section class="products section" id="cookies">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">La sélection du moment</p>
+          <h2>Choisis ton bonheur</h2>
+        </div>
+        <div class="filters" aria-label="Filtres des produits">
+          <button class="filter active" data-filter="all">Tous</button>
+          <button class="filter" data-filter="chocolat">Chocolat</button>
+          <button class="filter" data-filter="fruit">Fruités</button>
+        </div>
+      </div>
+      <div class="product-grid">
+        <article class="product-card" data-category="chocolat">
+          <div class="product-image chocolate">
+            <span class="product-tag">Best-seller</span>
+            <div class="cookie cookie-small"><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+          <div class="product-info">
+            <div><h3>Le Choco Crush</h3><p>Chocolat noir · Fleur de sel</p></div>
+            <button class="add-button" data-name="Le Choco Crush" data-price="4.20">4,20 € <span>+</span></button>
+          </div>
+        </article>
+        <article class="product-card" data-category="fruit">
+          <div class="product-image raspberry">
+            <span class="product-tag">Nouveau</span>
+            <div class="cookie cookie-small pink"><i></i><i></i><i></i><i></i></div>
+          </div>
+          <div class="product-info">
+            <div><h3>Berry Love</h3><p>Framboise · Chocolat blanc</p></div>
+            <button class="add-button" data-name="Berry Love" data-price="4.50">4,50 € <span>+</span></button>
+          </div>
+        </article>
+        <article class="product-card" data-category="chocolat">
+          <div class="product-image caramel">
+            <div class="cookie cookie-small caramel-cookie"><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+          <div class="product-info">
+            <div><h3>Caramel Mood</h3><p>Caramel beurre salé · Noix</p></div>
+            <button class="add-button" data-name="Caramel Mood" data-price="4.40">4,40 € <span>+</span></button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="story section" id="histoire">
+      <div class="story-card">
+        <div class="story-art">
+          <div class="cookie cookie-medium"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+        <div class="story-copy">
+          <p class="eyebrow">Notre recette secrète</p>
+          <h2>Des cookies qui ont quelque chose à raconter.</h2>
+          <p>Tout commence dans notre petite cuisine parisienne. Farine française, beurre AOP et chocolat de couverture : pas de raccourci, juste beaucoup d'amour et une obsession pour le cœur parfaitement fondant.</p>
+          <div class="values">
+            <span><b>01</b> Faits main</span>
+            <span><b>02</b> Sans conservateurs</span>
+            <span><b>03</b> Expédiés frais</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews section" id="avis">
+      <p class="eyebrow">Vous en parlez mieux que nous</p>
+      <h2>Petits mots, grandes émotions</h2>
+      <div class="review-grid">
+        <blockquote><span>★★★★★</span><p>“Croustillants dehors, incroyablement fondants dedans. Le Berry Love est devenu mon obsession.”</p><footer>— Sarah, Lyon</footer></blockquote>
+        <blockquote><span>★★★★★</span><p>“Livrés frais et encore plus généreux qu'en photo. Toute l'équipe en redemande.”</p><footer>— Hugo, Paris</footer></blockquote>
+        <blockquote><span>★★★★★</span><p>“Le cadeau parfait, même si j'avoue en avoir gardé deux pour moi.”</p><footer>— Inès, Bordeaux</footer></blockquote>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div><p class="eyebrow">Le club des gourmands</p><h2>-10% sur ta première commande</h2></div>
+      <form><label class="sr-only" for="email">Ton adresse e-mail</label><input id="email" type="email" placeholder="Ton adresse e-mail" required><button class="button button-primary">Je craque</button></form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="logo" href="#accueil">Chocoberry<span>.</span></a>
+    <p>Cookies artisanaux, préparés avec amour à Paris.</p>
+    <p>© 2026 Chocoberry</p>
+  </footer>
+
+  <aside class="cart-panel" aria-hidden="true">
+    <div class="cart-header"><h2>Ton panier</h2><button class="cart-close" aria-label="Fermer le panier">×</button></div>
+    <div class="cart-items"><p class="empty-cart">Ton panier attend sa dose de bonheur.</p></div>
+    <div class="cart-footer"><div><span>Total</span><strong class="cart-total">0,00 €</strong></div><button class="button button-primary">Commander</button></div>
+  </aside>
+  <div class="overlay"></div>
+  <div class="toast" role="status">Ajouté au panier</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
