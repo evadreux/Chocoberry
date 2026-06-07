@@ -3,127 +3,142 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Les créations pâtissières de Mellina : layer cakes, cookies et brownies.">
-  <title>Mellina — Layer cakes, cookies & brownies</title>
+  <meta name="description" content="Chocoberry by Mellina : brown butter cookies, brownies et layer cakes à Courbevoie.">
+  <title>Chocoberry by Mellina</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="#accueil">Mellina</a>
+    <a class="mini-logo" href="#accueil"><span>choco<br><b>berry</b></span></a>
     <nav aria-label="Navigation principale">
-      <a href="#creations">Créations</a>
-      <a href="#apropos">À propos</a>
-      <a href="#commander">Commander</a>
+      <a href="#cookies">Cookies</a>
+      <a href="#brownies">Brownies</a>
+      <a href="#cakes">Layer cakes</a>
     </nav>
-    <a class="order-link" href="#commander">Faire une demande</a>
+    <a class="order-link" href="#commander">Commander</a>
   </header>
 
   <main>
     <section class="hero" id="accueil">
       <div class="hero-copy">
-        <p class="intro">Pâtisserie artisanale</p>
-        <h1>Les douceurs<br>de <span>Mellina</span></h1>
-        <p class="hero-text">Layer cakes, cookies et brownies préparés sur commande pour vos fêtes et vos envies sucrées.</p>
-        <a class="button" href="#commander">Commander une création</a>
+        <p class="location">Courbevoie · 92</p>
+        <h1>choco<span>berry</span></h1>
+        <p class="byline">by Mellina</p>
+        <p class="hero-text">Brown butter cookies, brownies fondants et layer cakes créés sur commande.</p>
+        <a class="primary-button" href="#menu">Voir le menu</a>
       </div>
-      <div class="hero-collage" aria-label="Les spécialités de Mellina">
-        <article class="polaroid cake-card">
-          <div class="dessert cake" aria-hidden="true"><i></i><i></i><i></i></div>
-          <p>Layer cakes</p>
-        </article>
-        <article class="polaroid cookie-card">
-          <div class="dessert cookie" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-          <p>Cookies</p>
-        </article>
-        <article class="polaroid brownie-card">
-          <div class="dessert brownie" aria-hidden="true"><i></i></div>
-          <p>Brownies</p>
-        </article>
-        <span class="tape tape-one"></span>
-        <span class="tape tape-two"></span>
-      </div>
-      <p class="scroll-note">Découvrir les créations ↓</p>
-    </section>
-
-    <section class="profile section" id="apropos">
-      <div class="profile-photo" aria-label="Emplacement pour la photo de profil de Mellina">
-        <span>M</span>
-      </div>
-      <div class="profile-copy">
-        <p class="handle">@mellina</p>
-        <h2>Bienvenue dans mon univers sucré.</h2>
-        <p>Je réalise des layer cakes, des cookies et des brownies sur commande.</p>
-        <a href="#commander">Contacter Mellina</a>
-      </div>
-      <div class="profile-note">
-        <span>fait maison</span>
-        <span>sur commande</span>
-        <span>pour vos événements</span>
+      <div class="hero-menu" aria-label="Menu Chocoberry">
+        <p class="curve-text">MENU DES COOKIES</p>
+        <div class="logo-cookie"><span>choco<br><b>berry</b></span></div>
+        <div class="broken-cookie broken-one"><i></i><i></i><i></i></div>
+        <div class="broken-cookie broken-two"><i></i><i></i><i></i></div>
+        <p class="menu-note">fondants au centre<br>crispy sur les bords</p>
       </div>
     </section>
 
-    <section class="stories section" aria-labelledby="stories-title">
-      <div class="section-title">
-        <p>À la une</p>
-        <h2 id="stories-title">Choisis ta gourmandise</h2>
+    <section class="intro-section">
+      <p>Les cookies Chocoberry sont préparés avec du <strong>brown butter</strong>, un beurre lentement chauffé et caramélisé qui apporte un goût de noisettes torréfiées.</p>
+      <span>faits avec de bons ingrédients et beaucoup d’amour</span>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <header class="section-heading">
+        <p>Menu des cookies</p>
+        <h2>Trois familles,<br>une même gourmandise.</h2>
+      </header>
+      <div class="family-grid">
+        <article class="family pink" id="cookies">
+          <span class="family-number">01</span>
+          <div class="cookie-visual milk"><i></i><i></i><i></i><i></i></div>
+          <div><p>~ 65 g</p><h3>Les classiques</h3><p>Quand simplicité rime avec déliciosité.</p><strong>2,50 €</strong></div>
+        </article>
+        <article class="family burgundy">
+          <span class="family-number">02</span>
+          <div class="cookie-visual choco"><i></i><i></i><i></i><i></i></div>
+          <div><p>~ 80 / 90 g</p><h3>Les gourmands</h3><p>Kinder, pistache ou pâte à tartiner.</p><strong>3 €</strong></div>
+        </article>
+        <article class="family pink">
+          <span class="family-number">03</span>
+          <div class="cookie-visual decadent"><i></i><i></i><i></i><i></i></div>
+          <div><p>~ 105 / 120 g</p><h3>Les décadents</h3><p>Peanut butter, spéculos ou El Mordjene.</p><strong>3,50 €</strong></div>
+        </article>
       </div>
-      <div class="story-list">
-        <button class="story active" data-filter="all"><span class="story-cover all-cover">tout</span><strong>Tout voir</strong></button>
-        <button class="story" data-filter="cake"><span class="story-cover cake-cover"><i></i></span><strong>Layer cakes</strong></button>
-        <button class="story" data-filter="cookie"><span class="story-cover cookie-cover"><i></i><i></i><i></i></span><strong>Cookies</strong></button>
-        <button class="story" data-filter="brownie"><span class="story-cover brownie-cover"><i></i></span><strong>Brownies</strong></button>
+      <p class="minimum">Commandes à partir de 6 cookies.</p>
+    </section>
+
+    <section class="flavours">
+      <header class="section-heading light">
+        <p>Quelques saveurs</p>
+        <h2>Choisis ton cookie.</h2>
+      </header>
+      <div class="flavour-grid">
+        <article><div class="cookie-visual milk"><i></i><i></i><i></i></div><h3>The original</h3><p>Chocolat au lait</p></article>
+        <article><div class="cookie-visual white"><i></i><i></i><i></i></div><h3>White delicacy</h3><p>Chocolat blanc</p></article>
+        <article><div class="cookie-visual choco"><i></i><i></i><i></i></div><h3>L’indémodable</h3><p>Chocolat noir</p></article>
+        <article><div class="cookie-visual triple"><i></i><i></i><i></i></div><h3>Le triple chocolats</h3><p>Chocolat noir, au lait et blanc</p></article>
+        <article><div class="cookie-visual red"><i></i><i></i><i></i></div><h3>Red velvet</h3><p>Chocolat blanc et au lait</p></article>
+        <article><div class="cookie-visual lotus"><i></i><i></i><i></i></div><h3>Spéculos lava</h3><p>Biscuits et pâte de spéculos</p></article>
       </div>
     </section>
 
-    <section class="creations section" id="creations">
-      <div class="section-title creations-title">
-        <div><p>Le carnet de Mellina</p><h2>Les créations</h2></div>
-        <span>Préparées à la main<br>et sur commande</span>
+    <section class="brownies section-panel" id="brownies">
+      <div class="panel-copy">
+        <p>Menu des brownies</p>
+        <h2>Fondants,<br>chewy,<br>intenses.</h2>
+        <p>Préparés eux aussi avec du brown butter et une touche de fleur de sel.</p>
       </div>
-      <div class="creation-grid">
-        <article class="creation creation-wide" data-category="cake">
-          <div class="creation-art layer-art"><div class="dessert cake"><i></i><i></i><i></i></div></div>
-          <div class="creation-caption"><h3>Layer cakes</h3><p>Pour les anniversaires et les événements</p><button data-product="Layer cake">Demander un layer cake</button></div>
-        </article>
-        <article class="creation" data-category="cookie">
-          <div class="creation-art cookie-art"><div class="dessert cookie"><i></i><i></i><i></i><i></i><i></i></div></div>
-          <div class="creation-caption"><h3>Cookies</h3><p>Des cookies généreux à partager</p><button data-product="Cookies">Demander des cookies</button></div>
-        </article>
-        <article class="creation" data-category="brownie">
-          <div class="creation-art brownie-art"><div class="dessert brownie"><i></i></div></div>
-          <div class="creation-caption"><h3>Brownies</h3><p>Des carrés chocolatés et fondants</p><button data-product="Brownies">Demander des brownies</button></div>
-        </article>
+      <div class="brownie-board">
+        <article><div class="brownie-visual bueno"></div><h3>Bueno lover</h3></article>
+        <article><div class="brownie-visual lotus"></div><h3>Spéculos lava</h3></article>
+        <article><div class="brownie-visual oreo"></div><h3>Cutie oreo</h3></article>
+        <article><div class="brownie-visual pistache"></div><h3>Sweet pistacchio</h3></article>
+      </div>
+      <div class="prices">
+        <p><b>6 pièces</b><span>10 €</span></p>
+        <p><b>10 pièces</b><span>14 €</span></p>
+        <p><b>16 pièces</b><span>24 €</span></p>
       </div>
     </section>
 
-    <section class="order section" id="commander">
-      <div class="order-copy">
-        <p>Une envie particulière ?</p>
-        <h2>Parlons de ta prochaine création.</h2>
-        <p>Indique le type de gâteau, la date souhaitée et le nombre de personnes. Mellina pourra ensuite préciser les possibilités et le tarif.</p>
+    <section class="cakes section-panel" id="cakes">
+      <div class="cake-stage">
+        <div class="cake-visual pink-cake"><i></i><i></i><i></i></div>
+        <div class="cake-visual red-cake"><i></i><i></i><i></i></div>
+      </div>
+      <div class="panel-copy">
+        <p>Layer cakes & number cakes</p>
+        <h2>Crée ton<br>layer cake.</h2>
+        <p>Choisis le nombre de parts, ton modèle, ta base, ta crème et ton topping.</p>
+        <ul>
+          <li><b>5 parts</b><span>35 €</span></li>
+          <li><b>10 parts</b><span>60 €</span></li>
+          <li><b>15 parts</b><span>85 €</span></li>
+          <li><b>20 parts</b><span>100 €</span></li>
+        </ul>
+        <a class="primary-button light-button" href="#commander">Créer mon layer cake</a>
+      </div>
+    </section>
+
+    <section class="order-section" id="commander">
+      <div>
+        <p>Commande à Courbevoie</p>
+        <h2>Une envie<br>Chocoberry ?</h2>
       </div>
       <form class="order-form">
         <label>Ton prénom<input type="text" name="name" required></label>
         <label>Ta demande
           <select name="product" required>
-            <option value="">Choisir une création</option>
-            <option>Layer cake</option>
-            <option>Cookies</option>
-            <option>Brownies</option>
+            <option value="">Choisir</option>
+            <option>Cookies</option><option>Brownies</option><option>Layer cake</option>
           </select>
         </label>
-        <label class="full">Quelques détails<textarea name="details" rows="4" placeholder="Date, nombre de personnes, parfum souhaité…"></textarea></label>
-        <button class="button full" type="submit">Préparer ma demande</button>
+        <label class="full">Détails<textarea name="details" rows="4" placeholder="Quantité, date et saveurs souhaitées"></textarea></label>
+        <button class="primary-button full" type="submit">Préparer ma demande</button>
       </form>
     </section>
   </main>
 
-  <footer>
-    <a class="brand" href="#accueil">Mellina</a>
-    <p>Layer cakes · Cookies · Brownies</p>
-    <a href="#commander">Commander</a>
-  </footer>
-
+  <footer><a class="mini-logo" href="#accueil"><span>choco<br><b>berry</b></span></a><p>@chocoberry_bym · Mellina · Courbevoie 92</p><a href="#commander">Commander</a></footer>
   <div class="toast" role="status">Ta demande est prête.</div>
   <script src="script.js"></script>
 </body>
